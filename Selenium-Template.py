@@ -17,7 +17,7 @@ options = [
    "--window-size=1200,1200",
     "--ignore-certificate-errors"
  
-    #"--headless",
+    "--headless",
     #"--disable-gpu",
     #"--window-size=1920,1200",
     #"--ignore-certificate-errors",
