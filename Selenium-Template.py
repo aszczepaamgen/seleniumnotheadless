@@ -3,6 +3,15 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
 from pyvirtualdisplay import Display
+import smartsheet
+from selenium.webdriver import Chrome
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.common.exceptions import StaleElementReferenceException
+import time
 display = Display(visible=0, size=(800, 800))  
 display.start()
 
@@ -17,7 +26,7 @@ options = [
    "--window-size=1200,1200",
     "--ignore-certificate-errors"
  
-    "--headless",
+    #"--headless",
     #"--disable-gpu",
     #"--window-size=1920,1200",
     #"--ignore-certificate-errors",
@@ -69,7 +78,7 @@ items = '.ais-Hits'
 
 # Configure ChromeOptions
 options = ChromeOptions()
-options.add_argument('-headless')  # Optional: Run Chrome in headless mode for faster execution
+#options.add_argument('-headless')  # Optional: Run Chrome in headless mode for faster execution
 
 try:
     # Delete all existing rows in the target sheet
