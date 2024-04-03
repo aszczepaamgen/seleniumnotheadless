@@ -18,9 +18,9 @@ jobs:
         
        # Need to fetch reqs if needed
       - name: Installing all necessary packages
-        run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay 
+        run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay smartsheet-python-sdk
       - name: Install xvfb
-        run: sudo apt-get install xvfb smartsheet
+        run: sudo apt-get install xvfb
 
       - name: Running the Python script
         run: python Selenium-Template.py
